@@ -2,8 +2,8 @@ resource "vercel_project" "frontend_app" {
   name = "bwitter"
 
   framework        = "nextjs"
-  build_command    = "yarn nx build front --prod"
-  output_directory = "dist/apps/front/.next"
+  build_command    = "yarn nx build apps-client --prod"
+  output_directory = "dist/packages/apps/client"
 
   git_repository = {
     type = "github"
