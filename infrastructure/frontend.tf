@@ -12,7 +12,8 @@ resource "vercel_project" "frontend_app" {
   environment = [
     {
       key   = "NX_API_HOST"
-      value = "${heroku_app.api.web_url}"
+      value = "${heroku_app.api.web_url}api"
+
       target = [
         "production", "preview", "development"
       ]

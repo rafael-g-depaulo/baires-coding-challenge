@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: `${process.env["NX_API_HOST"] ?? "/"}api`,
+  apiUrl: process.env["NX_API_HOST"],
 }
