@@ -1,7 +1,6 @@
 resource "vercel_project" "frontend_app" {
   name = "bwitter"
 
-  framework        = "nextjs"
   build_command    = "yarn nx build apps-client --prod"
   output_directory = "dist/packages/apps/client"
 
@@ -13,7 +12,7 @@ resource "vercel_project" "frontend_app" {
   environment = [
     {
       key   = "NX_API_HOST"
-      value = heroku_app.api.web_url
+      value = "${heroku_app.api.web_url}"
       target = [
         "production", "preview", "development"
       ]
