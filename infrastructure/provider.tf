@@ -21,12 +21,12 @@ terraform {
     }
   }
 
-  # backend "remote" {
-  #   organization = "rafael-g-depaulo-personal-projects"
-  #   workspaces {
-  #     name = "bwitter"
-  #   }
-  # }
+  backend "remote" {
+    organization = "rafael-g-depaulo-personal-projects"
+    workspaces {
+      name = "bwitter"
+    }
+  }
 }
 
 provider "heroku" {
