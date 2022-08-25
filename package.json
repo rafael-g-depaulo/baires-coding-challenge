@@ -5,10 +5,10 @@
   "private": true,
   "scripts": {
     "postinstall": "[[ ! -z \"$DATABASE_URL\" ]] && echo \"Connecting to DB: '$DATABASE_URL'\" && yarn build-db || echo \"Skipping db build...\"",
-    "heroku-postbuild": "yarn build-db && yarn nx build back",
-    "build-api": "yarn build-db && yarn nx build back",
-    "build-db": "cd libs/db && yarn && yarn prisma generate && yarn prisma db push",
-    "serve-api-prod": "cd dist/apps/back && node main.js"
+    "heroku-postbuild": "yarn build-db && yarn nx build apps-server",
+    "build-api": "yarn build-db && yarn nx build apps-server",
+    "build-db": "cd packages/libs/db && yarn && yarn prisma generate && yarn prisma db push",
+    "serve-api-prod": "cd dist/packages/apps/server && node main.js"
   },
   "devDependencies": {
     "@nrwl/cli": "14.5.10",
