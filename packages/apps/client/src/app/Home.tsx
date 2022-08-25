@@ -1,11 +1,12 @@
 import { useHello } from "../api/hello"
+import { environment } from "../environments/environment"
 
 export const Home = () => {
   const { data } = useHello()
 
   return (
     <div>
-      <p>Message recieved from back is:</p>
+      <p>Message recieved from backend (URL: {environment.apiUrl}) is:</p>
       <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
   )
