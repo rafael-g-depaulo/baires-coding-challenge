@@ -7,7 +7,7 @@ resource "aws_iam_access_key" "s3-user-credentials" {
 }
 
 resource "aws_iam_policy" "s3-crud-access" {
-  name   = "S3CrudAccess"
+  name   = "S3GrantCRUDAccess"
   policy = file("./aws-policies/s3-crud-policy.json")
 }
 

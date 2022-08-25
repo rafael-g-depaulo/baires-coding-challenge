@@ -1,5 +1,5 @@
 resource "github_repository" "github-repo" {
-  name = "bwitter"
+  name = "baires-coding-challenge"
 
   # never change github
   lifecycle {
